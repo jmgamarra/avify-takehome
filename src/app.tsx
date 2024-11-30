@@ -1,6 +1,11 @@
 import React from 'react';
-
-const App = () => <h1>UK Energy Mix</h1>;
+import {EnergyChart} from './energyChart';
+const App = () => (
+    <>
+    <h1>UK Energy Mix</h1>
+    <EnergyChart/>
+    </>
+);
 
 export {
     App
