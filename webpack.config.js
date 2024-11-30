@@ -2,21 +2,22 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const isDevelopment = process.env.NODE_ENV === 'development';
 const host = 'localhost';
 const port = 8080;
 
 module.exports = {
-    mode: isDevelopment ? 'development' : 'production',
+    mode: 'development',
     context: path.resolve(__dirname, 'src'),
     target: 'web',
     entry: {
-        app: ['./index.tsx']
+        app: [
+            './index.tsx'
+        ]
     },
     output: {
         filename: '[name]-[contenthash:6].bundle.js',
-        path: path.join(__dirname, isDevelopment ? './build/www' : './dist'),
-        publicPath: isDevelopment ? `http://${host}:${port}/` : './', // Público relativo en producción
+        path: path.join(__dirname, './build/www'),
+        publicPath: `http://${host}:${port}/`
     },
     resolve: {
         mainFields: ['browser', 'module', 'main'],
@@ -37,11 +38,8 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|jpg|gif)$/i,
-                type: 'asset/resource',
-                generator: {
-                    filename: 'img/[name]-[contenthash:6][ext]'
-                }
+                test: /\.(png|jpg|gif)$/,
+                use: 'file-loader?name=img/[name]-[contenthash:6].[ext]',
             }
         ]
     },

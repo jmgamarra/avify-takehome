@@ -1,16 +1,11 @@
 {
-  "homepage": "https://jgamarra.github.io/energy-chart",
   "private": true,
   "scripts": {
     "test": "jest",
-    "start": "webpack-dev-server --hot --progress",
-    "build": "webpack --mode production",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "start": "webpack-dev-server --hot --progress"
   },
   "dependencies": {
     "chart.js": "^4.4.6",
-    "gh-pages": "^6.2.0",
     "react": "^18.1.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.1.0"
@@ -26,10 +21,12 @@
     "@types/jest": "^29.5.2",
     "babel-jest": "^29.6.0",
     "babel-loader": "^9.1.2",
+    "css-loader": "^7.1.2",
     "html-webpack-plugin": "^5.5.3",
     "jest": "^29.6.0",
     "jest-transform-stub": "^2.0.0",
     "mini-css-extract-plugin": "^2.7.6",
+    "style-loader": "^4.0.0",
     "ts-jest": "^29.1.1",
     "typescript": "^5.1.6",
     "webpack": "^5.88.1",

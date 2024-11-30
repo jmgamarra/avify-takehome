@@ -1,0 +1,61 @@
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left-panel {
+    flex: 1;
+    padding: 5px;
+    background-color: #f4f4f4;
+    overflow-y: hidden;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.left-panel h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.left-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.left-panel li {
+    padding: 4px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.left-panel li .key {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.left-panel li .key.active {
+    color: blue;
+}
+
+.left-panel li .description {
+    font-size: 14px;
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+.right-panel {
+    flex: 2;
+    padding: 5px;
+}
+
+.right-panel p {
+    margin: 0 0 10px;
+    font-weight: bold;
+    text-align: center;
+}
