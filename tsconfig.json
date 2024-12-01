@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "types": ["jest","node", "react", "react-dom"],
+    "typeRoots": ["node_modules/@types"],
     "allowJs": true,
     "esModuleInterop": true,
     "sourceMap": true,
@@ -7,7 +9,7 @@
     "experimentalDecorators": true,
     "lib": [
       "dom",
-      "es2017"
+      "es2017","esnext"
     ],
     "outDir": "./build"
   },
