@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const host = 'localhost';
 const port = 8080;
-
+const isDevelopment =false;
 module.exports = {
     mode: 'development',
     context: path.resolve(__dirname, 'src'),
@@ -16,8 +16,8 @@ module.exports = {
     },
     output: {
         filename: '[name]-[contenthash:6].bundle.js',
-        path: path.join(__dirname, './build/www'),
-        publicPath: `http://${host}:${port}/`
+        path: path.join(__dirname, './build'),
+        publicPath: isDevelopment ? `http://${host}:${port}/` : '/avify-takehome/', 
     },
     resolve: {
         mainFields: ['browser', 'module', 'main'],
